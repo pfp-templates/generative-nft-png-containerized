@@ -8,4 +8,4 @@ Uses rounakbanik/generative-art-nft example but containerized
 4. Add png files to pfp-data/assets appropriate to your use
 5. Edit pfp-files/config.py to reflect your preferences and to match your assets in pfp-data/assets
 6. Run build_and_run.bat (Windows) or build_and_run.sh (Mac, Linux)
-7. Verify output in pfp-data/output
+7. Verify output in pfp-files/output
