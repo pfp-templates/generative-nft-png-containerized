@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    image: pfp-python-png
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        WORKDIR: ${WORKDIR}
+    entrypoint: /bin/sh ${WORKDIR}/execute_scripts.sh
+    environment:
+      - BASE_NAME=${BASE_NAME}
+      - BASE_IMAGE_URL=${BASE_IMAGE_URL}
+      - BASE_JSON=${BASE_JSON}
+      - EDITION_NAME=${EDITION_NAME}
+      - NUM_AVATARS=${NUM_AVATARS}
+      - WORKDIR=${WORKDIR}
+    hostname: pfp-png
+    tty: true
+    volumes:
+      - ./pfp_data:${WORKDIR}
