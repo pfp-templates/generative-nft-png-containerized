@@ -19,4 +19,4 @@ services:
     hostname: pfp-png
     tty: true
     volumes:
-      - ./pfp_data:${WORKDIR}
+      - ./pfp-files:${WORKDIR}
